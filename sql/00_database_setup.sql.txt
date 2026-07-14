@@ -1,0 +1,13 @@
+-- =========================================
+-- Retail Sales Analytics Database Setup
+-- =========================================
+
+USE sales_analysis;
+
+SHOW TABLES;
+
+DESC superstore1;
+
+SELECT *
+FROM superstore1
+LIMIT 10;

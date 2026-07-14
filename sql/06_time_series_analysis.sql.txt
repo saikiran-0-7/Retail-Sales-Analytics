@@ -1,0 +1,17 @@
+-- Monthly Sales Trend
+SELECT
+YEAR(STR_TO_DATE(`Order Date`,'%m/%d/%Y')) AS Year,
+MONTH(STR_TO_DATE(`Order Date`,'%m/%d/%Y')) AS Month,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY Year,Month
+ORDER BY Year,Month;
+
+-- Monthly Profit
+SELECT
+YEAR(STR_TO_DATE(`Order Date`,'%m/%d/%Y')) AS Year,
+MONTH(STR_TO_DATE(`Order Date`,'%m/%d/%Y')) AS Month,
+ROUND(SUM(Profit),2) AS Profit
+FROM superstore1
+GROUP BY Year,Month
+ORDER BY Year,Month;

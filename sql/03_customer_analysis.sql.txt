@@ -1,0 +1,31 @@
+-- Total Customers
+SELECT COUNT(DISTINCT `Customer ID`)
+AS Total_Customers
+FROM superstore1;
+
+-- Top Customers by Revenue
+SELECT
+`Customer Name`,
+ROUND(SUM(Sales),2) AS Revenue
+FROM superstore1
+GROUP BY `Customer Name`
+ORDER BY Revenue DESC
+LIMIT 10;
+
+-- Top Customers by Profit
+SELECT
+`Customer Name`,
+ROUND(SUM(Profit),2) AS Profit
+FROM superstore1
+GROUP BY `Customer Name`
+ORDER BY Profit DESC
+LIMIT 10;
+
+-- Customers with Most Orders
+SELECT
+`Customer Name`,
+COUNT(DISTINCT `Order ID`) AS Orders
+FROM superstore1
+GROUP BY `Customer Name`
+ORDER BY Orders DESC
+LIMIT 10;

@@ -1,0 +1,33 @@
+-- Sales by Region
+SELECT
+Region,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY Region
+ORDER BY Sales DESC;
+
+-- Profit by Region
+SELECT
+Region,
+ROUND(SUM(Profit),2) AS Profit
+FROM superstore1
+GROUP BY Region
+ORDER BY Profit DESC;
+
+-- Top States
+SELECT
+State,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY State
+ORDER BY Sales DESC
+LIMIT 10;
+
+-- Top Cities
+SELECT
+City,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY City
+ORDER BY Sales DESC
+LIMIT 10;

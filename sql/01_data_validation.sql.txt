@@ -1,0 +1,32 @@
+-- Total Records
+SELECT COUNT(*) AS Total_Records
+FROM superstore1;
+
+-- Table Structure
+DESC superstore1;
+
+-- Missing Sales
+SELECT COUNT(*) AS Missing_Sales
+FROM superstore1
+WHERE Sales IS NULL;
+
+-- Missing Profit
+SELECT COUNT(*) AS Missing_Profit
+FROM superstore1
+WHERE Profit IS NULL;
+
+-- Duplicate Order IDs
+SELECT
+`Order ID`,
+COUNT(*) AS Total
+FROM superstore1
+GROUP BY `Order ID`
+HAVING COUNT(*)>1;
+
+-- Distinct Customers
+SELECT COUNT(DISTINCT `Customer ID`) AS Customers
+FROM superstore1;
+
+-- Distinct Products
+SELECT COUNT(DISTINCT `Product ID`) AS Products
+FROM superstore1;

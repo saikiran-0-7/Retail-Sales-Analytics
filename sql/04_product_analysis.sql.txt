@@ -1,0 +1,41 @@
+-- Sales by Category
+SELECT
+Category,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY Category
+ORDER BY Sales DESC;
+
+-- Profit by Category
+SELECT
+Category,
+ROUND(SUM(Profit),2) AS Profit
+FROM superstore1
+GROUP BY Category
+ORDER BY Profit DESC;
+
+-- Sales by Sub-Category
+SELECT
+`Sub-Category`,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY `Sub-Category`
+ORDER BY Sales DESC;
+
+-- Top Products
+SELECT
+`Product Name`,
+ROUND(SUM(Sales),2) AS Sales
+FROM superstore1
+GROUP BY `Product Name`
+ORDER BY Sales DESC
+LIMIT 15;
+
+-- Most Profitable Products
+SELECT
+`Product Name`,
+ROUND(SUM(Profit),2) AS Profit
+FROM superstore1
+GROUP BY `Product Name`
+ORDER BY Profit DESC
+LIMIT 15;
