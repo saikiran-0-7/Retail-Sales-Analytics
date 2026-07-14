@@ -52,10 +52,6 @@ Approximately 10,000 retail transactions.
 
 ---
 
-## Dashboard
-
-(Insert dashboard screenshot)
-
 ---
 
 ## KPIs
@@ -83,9 +79,3 @@ Approximately 10,000 retail transactions.
 
 ---
 
-## Future Improvements
-
-- Forecasting
-- Machine Learning
-- Live Database Connection
-- Automated ETL
